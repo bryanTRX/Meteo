@@ -5,21 +5,28 @@
     box-sizing: border-box;
 }
 
+/* Arrière-plan ajusté */
 body {
-    background-color: #222;
+    background-image: url('/images/17001-3840x2160-desktop-4k-mountain-wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+/* Carte météo */
 .card {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #fffc69, #8a547a);
+    background: linear-gradient(135deg, #f0b59e, #3c2721);
     color: #fff;
     margin: 100px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease;
 }
 
+/* Barre de recherche */
 .search {
     width: 100%;
     display: flex;
@@ -28,8 +35,8 @@ body {
 }
 
 .search input {
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
     background: #ebfffc;
     color: #555;
     padding: 10px 25px;
@@ -41,24 +48,31 @@ body {
 }
 
 .search button {
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
     background: #ebfffc;
-    border-radius:  50%;
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     cursor: pointer;
 }
 
+.search button:hover {
+    background: #b0a081;
+}
+
+
 .search button img {
     width: 18px;
 }
 
+/* Icône météo */
 .weather-icon {
     width: 170px;
     margin-top: 30px;
 }
 
+/* Titres météo */
 .weather h1 {
     font-size: 80px;
     font-weight: 500;
@@ -70,6 +84,7 @@ body {
     margin-top: -10px;
 }
 
+/* Détails météo */
 .details {
     display: flex;
     align-items: center;
@@ -94,14 +109,33 @@ body {
     margin-top: -6px;
 }
 
-/* .weather {
-    display: none;
-} */
-
+/* Message d'erreur */
 .error {
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
     margin-top: 10px;
     display: none;
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .card {
+        width: 90%;
+    }
+
+    .search input {
+        width: 70%;
+    }
+}
+
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
