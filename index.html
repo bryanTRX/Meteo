@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Météo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Application Météo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <div class="card">
-        <div class="search">
-            <label for="cityInput" aria-label="Entrez le nom d'une ville"></label>
-            <input type="text" id="cityInput" placeholder="Entrez le nom d'une ville" spellcheck="false">
-            <button id="searchBtn" aria-label="Rechercher"><img src="images/search.png" alt="Rechercher"></button>
-        </div>
-        <div class="error" id="errorMessage" role="alert" aria-live="assertive">
-            <p></p>
-        </div>
-        <!-- La section météo est masquée par défaut -->
-        <div class="weather" id="weatherData" style="display: none;">
-            <img src="" class="weather-icon" alt="Météo">
-            <h1 class="temp"><span class="visually-hidden">Température non disponible</span></h1>
-            <h2 class="city" aria-label="City">&nbsp;</h2>
-            <h3 class="local-time">Heure locale</h3>
-            <div class="details">
-                <div class="col">
-                    <img src="images/humidity.png" alt="Humidité">
-                    <div class="detail-text">
-                        <p class="humidity"></p>
-                        <p>Humidité</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="images/wind.png" alt="Vent">
-                    <div class="detail-text">
-                        <p class="wind"></p>
-                        <p>Vitesse du vent</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="card">
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Entrez le nom d'une ville" />
+      <button id="searchBtn"><img src="images/search.png" alt="Rechercher" /></button>
     </div>
-    <script src="script.js"></script>
+    <div class="error" id="errorMessage"></div>
+    <div class="weather" id="weatherData">
+      <img src="" class="weather-icon" alt="Icône météo" />
+      <h1 class="temp"></h1>
+      <h2 class="city"></h2>
+      <h3 class="local-time">Heure locale</h3>
+      <div class="details">
+        <div class="col">
+          <img src="images/humidity.png" alt="Humidité" />
+          <div>
+            <p class="humidity"></p>
+            <p>Humidité</p>
+          </div>
+        </div>
+        <div class="col">
+          <img src="images/wind.png" alt="Vent" />
+          <div>
+            <p class="wind"></p>
+            <p>Vitesse du vent</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
